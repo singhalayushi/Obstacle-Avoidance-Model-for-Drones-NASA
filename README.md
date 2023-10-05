@@ -9,8 +9,8 @@ Once we have identified the relevant independent variables, we will use Bayesian
 library(brms) #For Bayesian multilevel models
 ##Loading required package: Rcpp
 ##Loading 'brms' package (version 2.18.0). Useful instructions
-## can be found by typing help('brms'). A more detailed introduction
-## to the package is available through vignette('brms_overview').
+##can be found by typing help('brms'). A more detailed introduction
+##to the package is available through vignette('brms_overview').
 ## 
 ## Attaching package: 'brms'
 ## The following object is masked from 'package:stats':
