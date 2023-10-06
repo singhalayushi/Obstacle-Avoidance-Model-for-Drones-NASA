@@ -8,7 +8,7 @@ Once we have identified the relevant independent variables, we will use Bayesian
 ** This chunk loads all the required packages in R for our project. **
 
 ```
-library(brms) - #For Bayesian multilevel models -
+library(brms) _#For Bayesian multilevel models_
 library(corrplot) #Visualize correlation
 library(MASS) #Runs stepAIC function
 library (ggplot2) #Creates visualization
