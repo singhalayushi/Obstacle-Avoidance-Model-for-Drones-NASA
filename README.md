@@ -6,7 +6,9 @@ The dependent variable for our model will be real_height, which represents the h
 Once we have identified the relevant independent variables, we will use Bayesian modeling to develop a probabilistic model of the drone’s movement and obstacle detection. The Bayesian model will allow us to incorporate prior knowledge about the environment and the drone’s capabilities, as well as learn from data collected during drone flights. We will evaluate the performance of our model based on its ability to predict the real_height of obstacles in the map and avoid collisions. Based on the results of the Bayesian model, we will prepare an optimal path for the drone to follow, which avoids obstacles and minimizes travel time. The model can be used to develop better obstacle avoidance algorithms and inform the design of future drone systems.
 
 ** This chunk loads all the required packages in R for our project. **
-> library(brms) #For Bayesian multilevel models
+
+```
+> library(brms)
 > library(corrplot) #Visualize correlation
 > library(MASS) #Runs stepAIC function
 > library (ggplot2) #Creates visualization
@@ -15,6 +17,7 @@ Once we have identified the relevant independent variables, we will use Bayesian
 > library(BayesFactor) #Used for Bayesian model comparison
 > library(bridgesampling) #Computes log marginal likelihood via bridge sampling
 > library(loo) #For checking WAIC
+```
 
 ## Reading the data
 
