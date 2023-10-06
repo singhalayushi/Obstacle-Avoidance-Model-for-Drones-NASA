@@ -7,59 +7,20 @@ Once we have identified the relevant independent variables, we will use Bayesian
 
 ### This chunk loads all the required packages in R for our project.
 library(brms) #For Bayesian multilevel models
-##Loading required package: Rcpp
-##Loading 'brms' package (version 2.18.0). Useful instructions
-##can be found by typing help('brms'). A more detailed introduction
-##to the package is available through vignette('brms_overview').
-## 
-## Attaching package: 'brms'
-## The following object is masked from 'package:stats':
-## 
-##     ar
 library(corrplot) #Visualize correlation
-## corrplot 0.92 loaded
 library(MASS) #Runs stepAIC function
 library (ggplot2) #Creates visualization
 library(igraph) #Creates graphs
-## 
-## Attaching package: 'igraph'
-## The following objects are masked from 'package:stats':
-## 
-##     decompose, spectrum
-## The following object is masked from 'package:base':
-## 
-##     union
 library(readxl) #Reads and writes in excel
 library(BayesFactor) #Used for Bayesian model comparison
-## Loading required package: coda
-## Loading required package: Matrix
-## ************
-## Welcome to BayesFactor 0.9.12-4.4. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
-## 
-## Type BFManual() to open the manual.
-## ************
-## 
-## Attaching package: 'BayesFactor'
-## The following object is masked from 'package:igraph':
-## 
-##     compare
 library(bridgesampling) #Computes log marginal likelihood via bridge sampling
-## 
-## Attaching package: 'bridgesampling'
-## The following object is masked from 'package:brms':
-## 
-##     bf
 library(loo) #For checking WAIC
-## This is loo version 2.5.1
-## - Online documentation and vignettes at mc-stan.org/loo
-## - As of v2.0.0 loo defaults to 1 core but we recommend using as many as possible. Use the 'cores' argument or set options(mc.cores = NUM_CORES) for an entire session.
-## - Windows 10 users: loo may be very slow if 'mc.cores' is set in your .Rprofile file (see https://github.com/stan-dev/loo/issues/94).
-## 
-## Attaching package: 'loo'
-## The following object is masked from 'package:BayesFactor':
-## 
-##     compare
-## The following object is masked from 'package:igraph':
-## 
-##     compare
+
+## Reading the data
+
+### This code chunk reads the contents of the “map info.csv” file in the local directory. The functions used in this chunk are: a) read.csv() - Helps to read the csv file and stores the data in a dataframe map_df b) as.factor() - Converts the map_source column of the map_df dataframe into a factor variable using the as.factor() function. This is done when the data in a column represents categorical data, and for using a categorical data column as interaction, we convert it to a factor.
+
+map_df = read.csv("C:\\College\\Quarter 2\\OPS 804 - Advanced Data Analysis\\Project\\map_info.csv")
+map_df$map_source=as.factor(map_df$map_source)
+
 
