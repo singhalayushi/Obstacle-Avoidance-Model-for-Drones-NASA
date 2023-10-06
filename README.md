@@ -8,15 +8,15 @@ Once we have identified the relevant independent variables, we will use Bayesian
 ** This chunk loads all the required packages in R for our project. **
 
 ```
-> library(brms)
-> library(corrplot) #Visualize correlation
-> library(MASS) #Runs stepAIC function
-> library (ggplot2) #Creates visualization
-> library(igraph) #Creates graphs
-> library(readxl) #Reads and writes in excel
-> library(BayesFactor) #Used for Bayesian model comparison
-> library(bridgesampling) #Computes log marginal likelihood via bridge sampling
-> library(loo) #For checking WAIC
+library(brms)
+library(corrplot) #Visualize correlation
+library(MASS) #Runs stepAIC function
+library (ggplot2) #Creates visualization
+library(igraph) #Creates graphs
+library(readx) #Reads and writes in excel
+library(BayesFactor) #Used for Bayesian model comparison
+library(bridgesampling) #Computes log marginal likelihood via bridge sampling
+library(loo) #For checking WAIC
 ```
 
 ## Reading the data
