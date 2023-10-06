@@ -7,8 +7,9 @@ Once we have identified the relevant independent variables, we will use Bayesian
 
 ** This chunk loads all the required packages in R for our project. **
 
+
 ```
-library(brms) _#For Bayesian multilevel models_
+library(brms) #For Bayesian multilevel models
 library(corrplot) #Visualize correlation
 library(MASS) #Runs stepAIC function
 library (ggplot2) #Creates visualization
@@ -23,7 +24,34 @@ library(loo) #For checking WAIC
 
 ** This code chunk reads the contents of the “map info.csv” file in the local directory. The functions used in this chunk are: a) read.csv() - Helps to read the csv file and stores the data in a dataframe map_df b) as.factor() - Converts the map_source column of the map_df dataframe into a factor variable using the as.factor() function. This is done when the data in a column represents categorical data, and for using a categorical data column as interaction, we convert it to a factor. **
 
-> map_df = read.csv("C:\\College\\Quarter 2\\OPS 804 - Advanced Data Analysis\\Project\\map_info.csv")
-> map_df$map_source=as.factor(map_df$map_source)
+```
+map_df = read.csv("C:\\College\\Quarter 2\\OPS 804 - Advanced Data Analysis\\Project\\map_info.csv")
+map_df$map_source=as.factor(map_df$map_source)
+```
+
+## Learning about the dataset by using summary and str functions
+
+```
+summary(map_df) #Display summary statistics of the variables in the data frame.
+```
+
+```
+str(map_df)     #Displays the structure of the data frame.
+```
+
+```
+head(map_df,20) #Display the first 20 rows of the data frame.
+```
+
+## Checking the correlation
+
+**This code chunk is used to visualize the correlation between selected variables in the map_df dataset. The resulting correlation plot provides a quick overview of the strength and direction of the relationships between the variables.
+**
+
+```
+#Load required packages
+library(ggplot2)
+library(dplyr)
+```
 
 
