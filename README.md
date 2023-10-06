@@ -8,19 +8,19 @@ Once we have identified the relevant independent variables, we will use Bayesian
 #### This chunk loads all the required packages in R for our project.
 > library(brms) #For Bayesian multilevel models
 > library(corrplot) #Visualize correlation
-library(MASS) #Runs stepAIC function
-library (ggplot2) #Creates visualization
-library(igraph) #Creates graphs
-library(readxl) #Reads and writes in excel
-library(BayesFactor) #Used for Bayesian model comparison
-library(bridgesampling) #Computes log marginal likelihood via bridge sampling
-library(loo) #For checking WAIC
+> library(MASS) #Runs stepAIC function
+> library (ggplot2) #Creates visualization
+> library(igraph) #Creates graphs
+> library(readxl) #Reads and writes in excel
+> library(BayesFactor) #Used for Bayesian model comparison
+> library(bridgesampling) #Computes log marginal likelihood via bridge sampling
+> library(loo) #For checking WAIC
 
 ## Reading the data
 
 #### This code chunk reads the contents of the “map info.csv” file in the local directory. The functions used in this chunk are: a) read.csv() - Helps to read the csv file and stores the data in a dataframe map_df b) as.factor() - Converts the map_source column of the map_df dataframe into a factor variable using the as.factor() function. This is done when the data in a column represents categorical data, and for using a categorical data column as interaction, we convert it to a factor.
 
-map_df = read.csv("C:\\College\\Quarter 2\\OPS 804 - Advanced Data Analysis\\Project\\map_info.csv")
-map_df$map_source=as.factor(map_df$map_source)
+> map_df = read.csv("C:\\College\\Quarter 2\\OPS 804 - Advanced Data Analysis\\Project\\map_info.csv")
+> map_df$map_source=as.factor(map_df$map_source)
 
 
